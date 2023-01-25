@@ -9,7 +9,7 @@ To get started, make sure you've got the following dependencies installed:
 yarn add ethers wagmi use-delegatecash
 ```
 
-> 💭 `use-delegatecash` assumes you're already using [`wagmi`](https://github.com/wagmi-dev/wagmi) hooks.
+> 💭 `use-delegatecash` assumes you've already declared a [`WagmiConfig`](https://github.com/wagmi-dev/wagmi) at the root of your application.
 
 ### ✍️ Usage
 
