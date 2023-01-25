@@ -1,0 +1,25 @@
+{
+  "name": "use-delegatecash",
+  "version": "0.1.0",
+  "description": "⚛️ 💸 React.js hooks for delegate.cash",
+  "main": "dist",
+  "types": "dist",
+  "repository": "https://github.com/cawfree/use-delegatecash",
+  "author": "cawfree <hello@cawfree.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn && rm -rf dist ; tsc && rm -rf node_modules"
+  },
+  "dependencies": {
+    "delegatecash": "0.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "ethers": "5.7.2",
+    "react": "18.2.0",
+    "typescript": "4.9.4",
+    "wagmi": "0.10.15"
+  }
+}
