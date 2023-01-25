@@ -13,7 +13,9 @@ yarn add ethers wagmi use-delegatecash
 
 ### ✍️ Usage
 
-`use-delegatecash` wraps all of the getter functions exported by [`delegatecash`](https://github.com/delegatecash/delegatecash-javascript-sdk) inside stateful typesafe React hooks. You can also `useDelegateCash()` to return a [`DelegateCash`](https://github.com/delegatecash/delegatecash-javascript-sdk/blob/ef2f7b2d0e50b7b2ac8a9faef0edd1ed07e6807a/src/index.ts#L7) object which can be used to initiate transactions.
+`use-delegatecash` wraps all of the getter functions exported by [`delegatecash`](https://github.com/delegatecash/delegatecash-javascript-sdk) inside stateful typesafe React hooks.
+
+You can also `useDelegateCash()` to return a [`DelegateCash`](https://github.com/delegatecash/delegatecash-javascript-sdk/blob/ef2f7b2d0e50b7b2ac8a9faef0edd1ed07e6807a/src/index.ts#L7) object, which can be used to initiate transactions.
 
 ```typescript
 import * as React from 'react';
