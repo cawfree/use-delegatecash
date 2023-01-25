@@ -1,5 +1,5 @@
 # use-delegatecash
-⚛️ 💸 React.js hooks for [delegate.cash](https://delegate.cash) which enable you to build safer user experiences powered by asset delegation.
+⚛️ 💸 React.js hooks for [__delegate.cash__](https://delegate.cash) which enable you to build safer user experiences powered by asset delegation. Supports both [__React__](https://reactjs.org/) and [__React Native__](https://reactnative.dev).
 
 ## 🚀 Getting Started
 
