@@ -11,7 +11,7 @@
     "jsx": "react",
     "declaration": true,
     "lib": ["esnext"],
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
     "noFallthroughCasesInSwitch": true,

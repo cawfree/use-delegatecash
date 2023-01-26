@@ -1,6 +1,6 @@
 {
   "name": "use-delegatecash",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "⚛️ 💸 React.js hooks for delegate.cash",
   "main": "dist",
   "types": "dist",
