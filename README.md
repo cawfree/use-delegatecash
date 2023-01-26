@@ -6,7 +6,7 @@
 To get started, make sure you've got the following dependencies installed:
 
 ```
-yarn add ethers wagmi use-delegatecash
+yarn add ethers wagmi delegatecash use-delegatecash
 ```
 
 > 💭 `use-delegatecash` assumes you've already declared a [`WagmiConfig`](https://github.com/wagmi-dev/wagmi) at the root of your application.
