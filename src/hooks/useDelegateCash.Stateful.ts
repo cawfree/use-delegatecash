@@ -26,29 +26,43 @@ export function useDelegateCashStateful<
     loading: true,
   });
 
+  const refetch = React.useCallback(
+    async () => {
+      try {
+        setState({loading: true});
+
+        const maybeMethod = dc[method];
+
+        if (typeof maybeMethod !== 'function')
+          throw new Error(`"${method}" is not a valid function.`);
+
+        const result: Returns<Method> = await maybeMethod(
+          // @ts-ignore
+          ...params
+        );
+
+        setState({loading: false, result});
+
+        return result;
+      } catch (cause: any) {
+        setState({
+          loading: false,
+          error: new Error(`Failed to execute "${method}".`, cause),
+        });
+
+        // Enable manual refetches to error out.
+        throw cause;
+      }
+    },
+    [params, method, dc]
+  );
+
   React.useEffect(() => void (async () => {
     if (skip) return;
 
-    try {
-      setState({loading: true});
+    await refetch().catch();
 
-      const maybeMethod = dc[method];
+  })(), [refetch, skip]);
 
-      if (typeof maybeMethod !== 'function') throw new Error(`"${method}" is not a valid function.`);
-
-      const result: Returns<Method> = await maybeMethod(
-        // @ts-ignore
-        ...params
-      );
-
-      setState({loading: false, result});
-    } catch (cause: any) {
-      setState({
-        loading: false,
-        error: new Error(`Failed to execute "${method}".`, cause),
-      });
-    }
-  })(), [params, method, dc, skip]);
-
-  return state;
+  return {...state, refetch};
 }
