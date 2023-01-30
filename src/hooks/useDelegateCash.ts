@@ -8,13 +8,6 @@ type DelegateCashProvider = ethers.providers.Web3Provider | ethers.providers.Jso
 export function useDelegateCash() {
   const {provider} = useClient<DelegateCashProvider>();
   const {data: signer} = useSigner();
-
-  //const provider = React.useMemo<DelegateCashProvider>(() => ({
-  //  ...defaultProvider,
-  //  // @ts-ignore
-  //  //getSigner: () => signer,
-  //}), [defaultProvider, signer]);
-
   return React.useMemo(
     () => new DelegateCash(provider),
     [provider, signer]
